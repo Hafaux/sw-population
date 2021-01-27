@@ -44,7 +44,7 @@ export default class StarWarsUniverse extends EventEmitter {
   }
 
   async init() {
-    const url = 'https://swapi.dev/api/planets/';
+    const url = 'https://swapi.booost.bg/api/planets/';
     const planetsResponse = await fetch(url);
     const planetsData = await planetsResponse.json();
     const count = planetsData.count;
@@ -62,7 +62,7 @@ export default class StarWarsUniverse extends EventEmitter {
     const peopleData = [];
 
     for (let i = 1; i <= 10; i++) {
-      const personResponse = await fetch(`https://swapi.dev/api/people/${i}/`);
+      const personResponse = await fetch(`https://swapi.booost.bg/api/people/${i}/`);
       const personData = await personResponse.json();
 
       peopleData.push(personData);
